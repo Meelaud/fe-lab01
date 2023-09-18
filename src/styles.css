@@ -1,0 +1,99 @@
+.App {
+  padding: 1em;
+  width: 80%;
+  margin: auto;
+  display: block;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.img {
+ max-width: 100%;
+}
+
+.img-box {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.main {
+  padding: 1em;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  border-radius: 1rem;
+  border: 5px solid #8B0000;
+  padding: 2rem;
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #8B0000;
+  color:whitesmoke;
+  margin: 2rem;
+  border-radius: 5rem;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+.header-article {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: #8B0000;
+}
+.date {
+  font-style: italic;
+  font-weight: 200;
+}
+
+p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+
+
