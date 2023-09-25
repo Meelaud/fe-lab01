@@ -3,14 +3,18 @@ import { createRoot } from "react-dom/client";
 import "./styles.css";
 
 function App() {
+
+
+
   return (
     <div>
 
-      <Header title="My News Feed" date="September.18th / 2023" />
+      <Header title="My News Feed" date="September.25th / 2023" />
 
       <Main>
 
         <Article
+          id="1"
           news="Tesla Shanghai Capacity Will Exceed 1 Million Cars In 2022, BYD Blade Batteries Coming"
           author="By: Steve Hanely"
           content="Tesla's Giga Shanghai is expanding and will soon be able to manufacture more than 1 million cars a year."
@@ -19,6 +23,7 @@ function App() {
         />
 
         <Article
+          id="2"
           news="Elon Musk asegura que la 'verdadera' deuda de EU es de al menos 60 billones de dólares"
           author="By: Milenio Digital"
           content="El director ejecutivo de Tesla y SpaceX, Elon Musk, estimó que la deuda de Estados Unidos en tres veces mayor a su economía. 
@@ -29,6 +34,7 @@ function App() {
         />
 
         <Article
+          id="3"
           news="Tesla recall for heater and defroster systems issued by Transport Canada"
           author="By: Maria Merano"
           content="Transport Canada issued a recall for the Tesla Model 3, Model Y, and Model S on February 3, 2022, the agency told Teslarati recently. 
@@ -39,6 +45,7 @@ function App() {
         />
 
         <Article
+          id="4"
           news="China representó la mitad de las ventas globales de coches eléctricos en 2021"
           author="By: Newsroom Infobae"
           content="Shanghái (China), 14 feb La mitad de las ventas de vehículos eléctricos registradas en 2021 a nivel mundial se efectuaron en China, 
@@ -53,6 +60,7 @@ function App() {
     </div>
   )
 }
+
 
 function Header(props) {
   return (
@@ -72,10 +80,19 @@ function Main(props) {
 }
 
 function Article(props) {
+
+  const handleDelete = (e) => {
+    if (e.target === e.currentTarget) {
+      return;
+    }
+    e.currentTarget.remove();
+  }
+
   return (
     <div className="container">
-      
+
       <div className="left">
+        <button className="button" onClick={handleDelete}>X</button>
         <h2 className="header-article">
           <a href={props.url}>{props.news}</a>
         </h2>
@@ -84,8 +101,9 @@ function Article(props) {
       </div>
       <div className="right">
         <div className="img">
-          <img className="img-box"src={props.placeHolder} alt="" />
+          <img className="img-box" src={props.placeHolder} alt="" />
         </div>
+
       </div>
     </div>
   );

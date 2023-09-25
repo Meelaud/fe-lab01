@@ -30,6 +30,15 @@ h2 {
   align-items: center;
 }
 
+.button {
+  width: 3rem;
+  background-color: #8B0000;
+  color: aliceblue;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .container {
   max-width: 100%;
   display: flex;
